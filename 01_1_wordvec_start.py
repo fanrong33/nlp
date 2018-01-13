@@ -35,9 +35,15 @@ print(model['first'])
 print(len(model['first']))
 ''' 100  词向量为100维度 '''
 
-# 所以，则为所有的词的向量集合
+# 所以，则为所有的词的向量集合，理解word2vec的结构！
 print(model[model.wv.vocab])
-
+'''
+[[  3.35454009e-03  -2.96757789e-03   8.95642443e-04 ...,   4.16836003e-03
+   -3.26405023e-03  -1.91481831e-03]
+ ...,
+ [  7.19302261e-05   1.70022575e-03   3.59526509e-03 ...,   1.11010019e-03
+    3.70053225e-03  -3.61868995e-03]]
+'''
 
 # 3、持久化模型
 model.save('sample.en.text.model')
@@ -53,3 +59,7 @@ new_model = Word2Vec.load('sample.en.text.model')
 print(new_model)
 
 
+
+# 参考：
+# [How to Develop Word Embeddings in Python with Gensim](https://machinelearningmastery.com/develop-word-embeddings-python-gensim/)
+# [gensim.model.word2vec API](https://radimrehurek.com/gensim/models/word2vec.html)
