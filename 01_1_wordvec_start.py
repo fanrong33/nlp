@@ -1,5 +1,7 @@
 # encoding: utf-8
-# 词向量
+# word2vec的模型是基于神经网络来训练词向量模型；
+# word2vec的主要的应用还是自然语言的处理，通过训练出来的词向量，可以进行聚类等处理，或者作为其他深入学习的输入。
+
 
 from gensim.models import Word2Vec
 from gensim.models.word2vec import LineSentence
@@ -66,5 +68,6 @@ new_model = KeyedVectors.load_word2vec_format(filename, binary=True)
 
 
 # 参考：
+# [word2vec学习小记](https://www.jianshu.com/p/418f27df3968)
 # [How to Develop Word Embeddings in Python with Gensim](https://machinelearningmastery.com/develop-word-embeddings-python-gensim/)
 # [gensim.model.word2vec API](https://radimrehurek.com/gensim/models/word2vec.html)
