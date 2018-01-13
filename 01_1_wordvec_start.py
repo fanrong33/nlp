@@ -54,10 +54,15 @@ wv.save_word2vec_format() 函数保存的其实就是词汇和对应向量，不
 '''
 
 
-# 4、加载持久化的模型
+# 4、加载持久化的模型，需与上面持久化的模型对应，此为方法一
 new_model = Word2Vec.load('sample.en.text.model')
 print(new_model)
 
+# 4、加载持久化模型，方法二
+from gensim.models import KeyedVectors
+
+filename = 'sample.en.text.vector'
+new_model = KeyedVectors.load_word2vec_format(filename, binary=True)
 
 
 # 参考：
