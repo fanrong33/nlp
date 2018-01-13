@@ -11,7 +11,7 @@ model = Word2Vec.load('sample.en.text.model')
 
 
 # 2、增量训练句子集
-sentences = [['i', 'like', 'jinjiang']]
+sentences = [['i', 'like', 'china']]
 print(model.corpus_count)
 print(model.iter)
 model.build_vocab(sentences, update=True)
